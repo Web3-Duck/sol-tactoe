@@ -1,12 +1,12 @@
 [package]
-name = "test-de"
+name = "tactoe"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "test_de"
+name = "tactoe"
 
 [features]
 no-entrypoint = []
@@ -20,4 +20,6 @@ solana-program = "=1.16"
 anchor-lang = "0.29.0"
 num-traits = "0.2"
 num-derive = "0.4"
+anchor-spl = "0.29.0"
+
 
