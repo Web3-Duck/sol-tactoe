@@ -60,7 +60,7 @@ pub mod tactoe {
         game.play(amount)
     }
 
-    pub fn get_reward(ctx: Context<GetReward>, amount: u64) -> Result<()> {
+    pub fn get_reward(ctx: Context<GetReward>) -> Result<()> {
         let game = &mut ctx.accounts.game;
         if ctx.accounts.player.key() != game.player {
             return Err(TicTacToeError::InvalidPlayer.into());
@@ -93,7 +93,7 @@ pub mod tactoe {
 
         token::transfer(
             CpiContext::new(cpi_program, cpi_accounts).with_signer(signer_seeds),
-            amount,
+            100,
         )?;
         Ok(())
     }

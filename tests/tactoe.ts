@@ -128,10 +128,9 @@ describe("tactoe", () => {
     );
 
     await provider.sendAndConfirm(tx, [mintKp]);
-    const data = new BN(100);
 
     const txHash = await program.methods
-      .getReward(data)
+      .getReward()
       .accounts({
         game: gameKeypair.publicKey,
         pda,
